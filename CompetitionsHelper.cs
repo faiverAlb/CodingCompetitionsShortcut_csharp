@@ -160,6 +160,23 @@ namespace CompetitionsHelperCoolNamespace
         {
             Console.Write(value);
         }
+		
+		private static void WriteLineArray<T>(IEnumerable<T> value)
+        {
+            foreach (T val in value)
+            {
+                WriteLine(val);
+            }
+        }
+		
+		private static void WriteArray<T>(IEnumerable<T> value)
+        {
+            foreach (T val in value)
+            {
+                Write(" ");
+                Write(val);
+            }
+        }
 
         #endregion
     }
