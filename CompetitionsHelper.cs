@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CompetitionsHelperCoolNamespace
 {
-    public static class CompetitionsHelper
+        public static class CompetitionsHelper
     {
         #region Reader
 
@@ -14,14 +14,14 @@ namespace CompetitionsHelperCoolNamespace
             return Console.ReadLine();
         }
 
-        private static void Read(out int n1, out int n2)
+        public static void Read(out int n1, out int n2)
         {
             string[] input = ReadArray();
             n1 = int.Parse(input[0]);
             n2 = int.Parse(input[1]);
         }
 
-        private static void Read(out int n1, out int n2, out int n3)
+        public static void Read(out int n1, out int n2, out int n3)
         {
             string[] input = ReadArray();
             n1 = int.Parse(input[0]);
@@ -29,7 +29,7 @@ namespace CompetitionsHelperCoolNamespace
             n3 = int.Parse(input[2]);
         }
 
-        private static void Read(out int n1, out int n2, out int n3, out int n4)
+        public static void Read(out int n1, out int n2, out int n3, out int n4)
         {
             string[] input = ReadArray();
             n1 = int.Parse(input[0]);
@@ -38,48 +38,48 @@ namespace CompetitionsHelperCoolNamespace
             n4 = int.Parse(input[3]);
         }
 
-        private static void Read<T>(out T a1, out T a2)
+        public static void Read<T>(out T a1, out T a2)
         {
             string[] input = ReadArray();
-            a1 = (T) Convert.ChangeType(input[0], typeof (T));
-            a2 = (T) Convert.ChangeType(input[1], typeof (T));
+            a1 = (T)Convert.ChangeType(input[0], typeof(T));
+            a2 = (T)Convert.ChangeType(input[1], typeof(T));
         }
 
-        private static void Read<T>(out T a1, out T a2, out T a3)
+        public static void Read<T>(out T a1, out T a2, out T a3)
         {
             string[] input = ReadArray();
-            a1 = (T) Convert.ChangeType(input[0], typeof (T));
-            a2 = (T) Convert.ChangeType(input[1], typeof (T));
-            a3 = (T) Convert.ChangeType(input[2], typeof (T));
+            a1 = (T)Convert.ChangeType(input[0], typeof(T));
+            a2 = (T)Convert.ChangeType(input[1], typeof(T));
+            a3 = (T)Convert.ChangeType(input[2], typeof(T));
         }
 
-        private static void Read<T>(out T a1, out T a2, out T a3, out T a4)
+        public static void Read<T>(out T a1, out T a2, out T a3, out T a4)
         {
             string[] input = ReadArray();
-            a1 = (T) Convert.ChangeType(input[0], typeof (T));
-            a2 = (T) Convert.ChangeType(input[1], typeof (T));
-            a3 = (T) Convert.ChangeType(input[2], typeof (T));
-            a4 = (T) Convert.ChangeType(input[3], typeof (T));
+            a1 = (T)Convert.ChangeType(input[0], typeof(T));
+            a2 = (T)Convert.ChangeType(input[1], typeof(T));
+            a3 = (T)Convert.ChangeType(input[2], typeof(T));
+            a4 = (T)Convert.ChangeType(input[3], typeof(T));
         }
 
-        private static int ReadInt()
+        public static int ReadInt()
         {
             return Int32.Parse(Read());
         }
 
-        private static long ReadLong()
+        public static long ReadLong()
         {
             return long.Parse(Read());
         }
 
-        private static double ReadDouble()
+        public static double ReadDouble()
         {
             return double.Parse(Read(), CultureInfo.InvariantCulture);
         }
 
-        private static T Read<T>()
+        public static T Read<T>()
         {
-            return (T) Convert.ChangeType(Read(), typeof (T));
+            return (T)Convert.ChangeType(Read(), typeof(T));
         }
 
         private static string[] ReadArray()
@@ -91,7 +91,7 @@ namespace CompetitionsHelperCoolNamespace
             throw new ArgumentException();
         }
 
-        private static List<int> ReadIntArray()
+        public static List<int> ReadIntArray()
         {
             return ReadArray().Select(Int32.Parse).ToList();
         }
@@ -101,17 +101,17 @@ namespace CompetitionsHelperCoolNamespace
             return ReadArray().Select(long.Parse).ToList();
         }
 
-        private static List<double> ReadDoubleArray()
+        public static List<double> ReadDoubleArray()
         {
             return ReadArray().Select(d => double.Parse(d, CultureInfo.InvariantCulture)).ToList();
         }
 
         private static List<T> ReadArray<T>()
         {
-            return ReadArray().Select(x => (T) Convert.ChangeType(x, typeof (T))).ToList();
+            return ReadArray().Select(x => (T)Convert.ChangeType(x, typeof(T))).ToList();
         }
 
-        private static void WriteLine(int value)
+        public static void WriteLine(int value)
         {
             Console.WriteLine(value);
         }
@@ -126,7 +126,7 @@ namespace CompetitionsHelperCoolNamespace
             Console.WriteLine(value);
         }
 
-        private static void WriteLine(double value, string stringFormat)
+        public static void WriteLine(double value, string stringFormat)
         {
             Console.WriteLine(value.ToString(stringFormat, CultureInfo.InvariantCulture));
         }
@@ -136,22 +136,22 @@ namespace CompetitionsHelperCoolNamespace
             Console.WriteLine(value);
         }
 
-        private static void Write(int value)
+        public static void Write(int value)
         {
             Console.Write(value);
         }
 
-        private static void Write(double value)
+        public static void Write(double value)
         {
             Console.Write(value.ToString(CultureInfo.InvariantCulture));
         }
 
-        private static void Write(long value)
+        public static void Write(long value)
         {
             Console.Write(value);
         }
 
-        private static void Write(double value, string stringFormat)
+        public static void Write(double value, string stringFormat)
         {
             Console.Write(value.ToString(stringFormat, CultureInfo.InvariantCulture));
         }
@@ -160,16 +160,16 @@ namespace CompetitionsHelperCoolNamespace
         {
             Console.Write(value);
         }
-		
-		private static void WriteLineArray<T>(IEnumerable<T> value)
+
+        public static void WriteLineArray<T>(IEnumerable<T> value)
         {
             foreach (T val in value)
             {
                 WriteLine(val);
             }
         }
-		
-		private static void WriteArray<T>(IEnumerable<T> value)
+
+        public static void WriteArray<T>(IEnumerable<T> value)
         {
             foreach (T val in value)
             {
