@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CompetitionsHelperCoolNamespace
 {
-        public static class CompetitionsHelper
+    public static class CompetitionsHelper
     {
         #region Reader
 
